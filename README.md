@@ -12,8 +12,8 @@ pnpm dev
 
 ### This is just API for chatGTP translator.
 
-1. ask-a-question
-Endpoint
+1. ask-a-question 
+
 ```bash
 http://localhost:3000/api/ask-a-question
 ```
@@ -33,3 +33,20 @@ Result
 
 2. translate
 
+```bash
+http://localhost:3000/api/translate
+```
+Params
+```json
+{
+    "query": "Tell me what is chatGPT.",
+    "language": "Spanish"
+}
+```
+
+Result
+```json
+{
+    "result": "\n\nDime qué es chatGPT."
+}
+```
