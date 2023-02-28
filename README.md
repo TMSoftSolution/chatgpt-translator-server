@@ -12,7 +12,7 @@ pnpm dev
 
 ### This is just API for chatGTP translator.
 
-1. ask-a-question 
+#### ask-a-question 
 
 ```bash
 http://localhost:3000/api/ask-a-question
@@ -31,7 +31,7 @@ Result
 }
 ```
 
-2. translate
+###3 translate
 
 ```bash
 http://localhost:3000/api/translate
