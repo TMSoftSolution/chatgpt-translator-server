@@ -14,11 +14,12 @@ export default async function handler(
     res.status(400).json({ error: 'Invalid params' })
   }
 
-  const completion = await openAI.createCompletion({
-    model: 'text-davinci-003',
-    prompt: req?.body?.question,
-    temperature: 0.8,
-    max_tokens: 2048,
+  const completion = await openAI.createChatCompletion({
+    model: 'gpt-3.5-turbo',
+    messages: [
+      {"role": "system", "content": "You are a helpful assistant."},
+      {"role": "user", "content": req?.body?.question}]
+      ,
   });
-  res.status(200).json({ result: completion.data?.choices?.[0]?.text });
+  res.status(200).json({ result: completion.data.choices[0].message?.content });
 }

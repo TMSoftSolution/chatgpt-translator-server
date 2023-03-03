@@ -20,7 +20,7 @@ export default async function handler(
     // The ?? after `query` is just a HACK
     prompt: query,
     n:1,
-    size: "256x256"
+    size: "1024x1024"
  
   });
   res.status(200).json({ result: completion.data.data[0].url});
